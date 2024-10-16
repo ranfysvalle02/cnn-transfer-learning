@@ -1,5 +1,10 @@
 # cnn-transfer-learning
 
+![](https://media.geeksforgeeks.org/wp-content/uploads/20240711121006/Applications-of-Transfer-Learning-in-Computer-Vision.png)
+
+__Image Credit to [Explain the concept of transfer learning and its application in computer vision](https://www.geeksforgeeks.org/explain-the-concept-of-transfer-learning-and-its-application-in-computer-vision/)__
+
+
 # **Accelerating Shape Classification with Transfer Learning**
 
 In the [previous post](https://github.com/ranfysvalle02/shapeclassifer-cnn), we delved into the creation of a Convolutional Neural Network (CNN) from scratch to classify geometric shapes. While this approach is a valuable learning exercise, it may not always be the most efficient, especially when dealing with larger, more complex datasets or when computational resources are limited. This is where **transfer learning** comes into play. In this post, we’ll explore how transfer learning can supercharge our shape classification tasks and any other image recognition projects.
