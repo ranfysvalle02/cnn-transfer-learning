@@ -37,7 +37,7 @@ In essence, transfer learning facilitates quicker experimentation and innovation
 
 __Image Credit to [Perception! Immersion! Empowerment! Superpowers as Inspiration for Visualization](https://virtual.ieeevis.org/year/2021/paper_v-full-1160.html)__
 
-The initial layers of a deep neural network have learned to extract the fundamental building blocks of visual perception. These layers act as feature extractors, identifying and encoding low-level features such as:
+The initial layers of a CNN trained for `Shape Classification` have learned to extract the fundamental building blocks of visual perception. These layers act as feature extractors, identifying and encoding low-level features such as:
 
 * **Edges:** The boundaries between different regions in an image.
 * **Textures:** The patterns or structures within regions.
