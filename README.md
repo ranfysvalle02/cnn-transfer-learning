@@ -10,6 +10,21 @@ Transfer learning is a machine learning strategy where a model trained on one ta
 
 For instance, consider a CNN model pre-trained on ImageNet, a large dataset containing millions of images across thousands of categories. The lower layers of this model have already learned to detect fundamental features like edges, textures, and patterns. By leveraging these pre-learned features and only fine-tuning the upper layers to classify shapes, we can adapt the model for our specific task without retraining the entire network.
 
+## **Understanding the Foundations of Perception**
+
+The initial layers of a deep neural network have learned to extract the fundamental building blocks of visual perception. These layers act as feature extractors, identifying and encoding low-level features such as:
+
+* **Edges:** The boundaries between different regions in an image.
+* **Textures:** The patterns or structures within regions.
+* **Shapes:** The geometric outlines of objects.
+* **Colors:** The hue, saturation, and brightness of pixels.
+
+## **Leveraging Pre-trained Knowledge**
+
+Consider a pre-trained CNN model on ImageNet, a massive dataset with millions of images across various categories. The initial layers in this model have already learned to identify fundamental features like edges, textures, and patterns. 
+
+By leveraging these pre-learned features, we can **fine-tune** the upper layers to classify shapes. This allows us to adapt the model for our specific task without retraining the entire network from scratch.
+
 ## Why Use Transfer Learning for Shape Classification?
 
 Transfer learning brings several benefits to the table, especially for tasks involving simple or synthetic data like shape classification:
