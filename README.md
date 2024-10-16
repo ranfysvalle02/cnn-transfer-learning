@@ -33,6 +33,10 @@ In essence, transfer learning facilitates quicker experimentation and innovation
 
 ## **Understanding the Foundations of Perception**
 
+![](https://ieeevis.b-cdn.net/vis_2021/paper_images/v-full-1160.png)
+
+__Image Credit to [Perception! Immersion! Empowerment! Superpowers as Inspiration for Visualization](https://virtual.ieeevis.org/year/2021/paper_v-full-1160.html)__
+
 The initial layers of a deep neural network have learned to extract the fundamental building blocks of visual perception. These layers act as feature extractors, identifying and encoding low-level features such as:
 
 * **Edges:** The boundaries between different regions in an image.
