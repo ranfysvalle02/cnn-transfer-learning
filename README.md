@@ -11,15 +11,15 @@ In the [previous post](https://github.com/ranfysvalle02/shapeclassifer-cnn), we 
 
 ## What is Transfer Learning?
 
-![](https://miro.medium.com/max/1610/1*WysCJ6Ynecvviwctt6WDlQ.png)
-
-__Image Credit to [Transfer Learning for Image Classification in PyTorch](https://jovian.com/bhuvan2k3/transfer-learning-pytorch)__
-
 Transfer learning is a machine learning strategy where a model trained on one task is repurposed on a related task. It's like applying knowledge learned from one subject to another subject in school. This technique can drastically reduce the amount of training data and computational resources required, making it a powerful tool in the machine learning toolbox.
 
 For instance, consider a CNN model pre-trained on ImageNet, a large dataset containing millions of images across thousands of categories. The lower layers of this model have already learned to detect fundamental features like edges, textures, and patterns. By leveraging these pre-learned features and only fine-tuning the upper layers to classify shapes, we can adapt the model for our specific task without retraining the entire network.
 
 ## Perception in Neural Network Training and Transfer Learning
+
+![](https://miro.medium.com/max/1610/1*WysCJ6Ynecvviwctt6WDlQ.png)
+
+__Image Credit to [Transfer Learning for Image Classification in PyTorch](https://jovian.com/bhuvan2k3/transfer-learning-pytorch)__
 
 Perception, the process of interpreting input data, is crucial in training neural networks. When training from scratch, a model must learn to perceive features and patterns, which can be time-consuming and computationally intensive.
 
