@@ -25,6 +25,15 @@ Consider a pre-trained CNN model on ImageNet, a massive dataset with millions of
 
 By leveraging these pre-learned features, we can **fine-tune** the upper layers to classify shapes. This allows us to adapt the model for our specific task without retraining the entire network from scratch.
 
+
+## **The Computational Benefits**
+
+Training a deep neural network from scratch can be computationally expensive, especially when dealing with large datasets or complex models. Using pre-trained layers can offer significant computational savings:
+
+* **Reduced Training Time:** As mentioned above, training the upper layers is much faster than training the entire network from scratch.
+* **Lower Hardware Requirements:** Smaller models or lower-resolution images can be used, reducing the computational demands on hardware.
+* **Energy Efficiency:** Less computational work means less energy consumption.
+
 ## Why Use Transfer Learning for Shape Classification?
 
 Transfer learning brings several benefits to the table, especially for tasks involving simple or synthetic data like shape classification:
