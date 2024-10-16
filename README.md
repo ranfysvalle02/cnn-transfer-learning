@@ -303,7 +303,7 @@ By leveraging the knowledge encoded in the pre-trained model, you can significan
 The process of fine-tuning an LLM involves several key steps:
 
 1. **Obtain the Pre-trained Model:** Download the desired LLM model from the appropriate repository.
-2. **Prepare Your Dataset:** Create a dataset that is representative of the task you want to fine-tune the model for. Ensure the data is cleaned, formatted, and appropriately tokenized.
+2. **Prepare Your Dataset:** Create a dataset that is representative of the task you want to fine-tune the model for. Ensure the data is cleaned, formatted, etc.
 3. **Define the Fine-Tuning Parameters:** Set parameters like the learning rate, batch size, and number of epochs.
 4. **Train the Model:** Feed your dataset to the pre-trained LLM and train it. The model will adjust its parameters to better fit the specific task.
 5. **Evaluate the Model:** Use a validation set to assess the model's performance during training and adjust parameters as needed.
