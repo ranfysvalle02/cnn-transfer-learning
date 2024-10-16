@@ -337,7 +337,7 @@ Internet scraping, while a tempting source of data, comes with significant risks
 * **Data Quality Concerns:** Scraped data can be noisy, incomplete, or biased, affecting your model's performance. Clean and preprocess scraped data carefully to ensure its quality.
 * **Website Restrictions:** Many websites implement measures to prevent scraping, such as CAPTCHAs or rate limiting. These can make data collection challenging.
 
-**Bias in Machine Learning: A Persistent Challenge**
+**Bias in Machine Learning**
 
 Bias in machine learning arises when a model's predictions are systematically skewed towards a particular group or outcome. This can be due to several factors:
 
