@@ -133,67 +133,6 @@ Absolutely, let's delve deeper into the transfer learning aspect of the code:
 
 This script demonstrates how transfer learning can be used to adapt a model trained on one task (classifying certain shapes) to a related task (classifying new shapes), saving computational resources and improving efficiency.
 
-## Transfer Learning for New Shapes
-
-1. **Defining the Base Model**: The `SimpleShapeClassifier` class defines a simple Convolutional Neural Network (CNN) model for shape classification. It includes methods for the forward pass, training, validation, testing, and configuring optimizers. This model is trained on a dataset of images with shapes like circles, squares, and triangles.
-
-2. **Creating a New Dataset**: The script introduces new shapes (star, pentagon) and generates images for these new shapes using the `generate_new_shape_image` function. It then creates a new dataset, splits it into training and validation sets, and creates data loaders.
-
-3. **Transfer Learning for New Shapes**: The `TransferShapeClassifier` class extends the `SimpleShapeClassifier` class. It freezes the convolutional layers and replaces the last fully connected layer to match the number of classes in the new dataset. This is the essence of transfer learning - reusing the lower layers of the model that have learned to detect fundamental features like edges and textures, and fine-tuning the upper layers to classify new shapes.
-
-    ```python
-    class TransferShapeClassifier(SimpleShapeClassifier):
-        def __init__(self, num_classes, learning_rate=0.001):
-            super().__init__(num_classes, learning_rate)
-            # Freeze the convolutional layers
-            for param in self.conv1.parameters():
-                param.requires_grad = False
-            for param in self.conv2.parameters():
-                param.requires_grad = False
-            # Replace the last fully connected layer to match the number of classes in the new dataset
-            self.fc2 = torch.nn.Linear(128, num_classes)
-    ```
-
-4. **Training and Testing the New Model**: The script trains the new model on the new dataset and tests it. This is done using the PyTorch Lightning's `Trainer` class, which simplifies the training process.
-
-    ```python
-    # Define new model
-    new_model = TransferShapeClassifier(num_classes=len(NEW_SHAPES))
-
-    # Define new trainer
-    new_trainer = pl.Trainer(max_epochs=10, default_root_dir='./logs')
-
-    # Train new model
-    new_trainer.fit(new_model, new_train_loader, new_val_loader)
-
-    # Test new model
-    new_test_dataset = torch.utils.data.TensorDataset(new_dataset, new_labels)
-    new_test_loader = DataLoader(new_test_dataset, batch_size=32, shuffle=False)
-    new_trainer.test(model=new_model, dataloaders=new_test_loader)
-    ```
-
-5. **Predicting Shapes for New Unseen and Seen Images**: The script generates new unseen and seen images and uses the new model to predict their shapes. This demonstrates the effectiveness of the transfer learning approach.
-
-    ```python
-    # Predict shape for new unseen image
-    print("Generating new image [unseen shape = hexagon]")
-    new_image_unseen = generate_new_shape_image('hexagon')
-    predicted_shape = predict_shape(new_model, new_image_unseen, NEW_SHAPES)
-    print(f"Predicted shape: {predicted_shape}")
-
-    # Predict shape for new seen image
-    print("Generating new image [seen shape = star]")
-    new_image_seen = generate_new_shape_image('star')
-    predicted_shape = predict_shape(new_model, new_image_seen, NEW_SHAPES)
-    print(f"Predicted shape: {predicted_shape}")
-    print("Generating new image [seen shape = pentagon]")
-    new_image_seen = generate_new_shape_image('pentagon')
-    predicted_shape = predict_shape(new_model, new_image_seen, NEW_SHAPES)
-    print(f"Predicted shape: {predicted_shape}")
-    ```
-
-This script demonstrates how transfer learning can be used to adapt a model trained on one task (classifying certain shapes) to a related task (classifying new shapes), saving computational resources and improving efficiency.
-
 ## Output
 
 ```
