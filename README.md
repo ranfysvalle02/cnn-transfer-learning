@@ -97,8 +97,6 @@ Transfer learning has found applications in a wide range of fields:
 
 Now, let's dive into a practical example. We'll use PyTorch, a popular deep learning library, and PyTorch Lightning, a high-level interface for PyTorch, to demonstrate transfer learning in a simple image classification task.
 
-Absolutely, let's delve deeper into the transfer learning aspect of the code:
-
 1. **Defining the Base Model**: The `SimpleShapeClassifier` class defines a simple Convolutional Neural Network (CNN) model for shape classification. It includes methods for the forward pass, training, validation, testing, and configuring optimizers. This model is trained on a dataset of images with shapes like circles, squares, and triangles.
 
 2. **Creating a New Dataset**: The script introduces new shapes (star, pentagon) and generates images for these new shapes using the `generate_new_shape_image` function. It then creates a new dataset, splits it into training and validation sets, and creates data loaders.
