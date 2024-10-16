@@ -290,7 +290,7 @@ Here are some common issues you might encounter when using transfer learning and
 
 By understanding the factors that influence test loss and addressing common troubleshooting issues, you can effectively leverage transfer learning to improve the performance of your machine learning models.
 
-## **Limitations of Transfer Learning and the Problem with Internet as your source of data**
+## **Limitations of Transfer Learning**
 
 **Transfer Learning: A Double-Edged Sword**
 
